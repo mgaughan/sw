@@ -8,8 +8,8 @@
  * Controller of the swFrontApp
  */
 angular.module('swFrontApp')
-  .controller('MainCtrl', function ($scope, $resource) {
-  	$resource('/api/edges').query();
+  .controller('MainCtrl', function ($scope) {
+  	// $resource('/api/edges').query();
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
