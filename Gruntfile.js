@@ -352,6 +352,22 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'test/karma.conf.js'
       }
+    },
+
+    protractor: {
+
+      options: {
+        configFile: 'test/protractor.conf.js',
+        keepAlive: true,
+        noColor: false
+      },
+      chrome:{
+        options: {
+          args: {
+            browser: 'chrome'
+          }
+        }
+      }
     }
   });
 
@@ -406,4 +422,11 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.loadNpmTasks('grunt-protractor-runner');
+
+  grunt.registerTask('protractor-e2e', [
+    'protractor:chrome'
+  ]);
+
 };
