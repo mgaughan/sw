@@ -425,7 +425,7 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-protractor-runner');
 
-  grunt.registerTask('protractor-e2e', [
+  grunt.registerTask('e2e', [
     'protractor:chrome'
   ]);
 
